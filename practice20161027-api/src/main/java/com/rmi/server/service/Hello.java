@@ -6,6 +6,6 @@ import java.rmi.RemoteException;
 
 public interface Hello  extends  Remote,Serializable{
 
-	String sayHello()throws RemoteException;
+	public String sayHello()throws RemoteException;
 
 }

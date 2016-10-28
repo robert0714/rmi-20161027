@@ -13,14 +13,9 @@ public class HelloServer {
 
 		try {
 			LocateRegistry.createRegistry(1099);
-			IHello hello = new HelloImpl();
-			// Naming.rebind("server.Hello", hello);
-			// TimeRMI timeRMI = new TimeRmiImpl();
-
-			// Naming.rebind("timeRmi", timeRMI);
-
-			Naming.bind("rmi://localhost:1099/hello", hello);
-			System.out.println(">>>INFO:TimeRMI Ready!");
+			IHello hello = new HelloImpl();	
+			Naming.bind("rmi://192.168.7.185:1099/hello", hello);
+			System.out.println(">>>INFO:hello Ready!");
 		} catch (Exception e) {
 			System.out.println(">>>FALSE!");
 			e.printStackTrace();
